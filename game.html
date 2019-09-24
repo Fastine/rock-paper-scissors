@@ -8,13 +8,57 @@
 "paper",
 "scissors"];
 
-    function computerPlay() {     
+    function computerPlay() {     //Randomizes computers selection
         return (answers[Math.floor(Math.random() * answers.length)]);
         }
 
-    function playRound(playerSelection, computerSelection) {
-        return playerSelection = (prompt("Type Rock, Paper, or Scissors", ""))
-        return computerSelection (computerPlay())
+    function playRound(playerSelection, computerSelection) { //Executes a round
+        if (playerSelection == 'rock')
+            if (computerSelection == 'rock') {
+                return "Tie! Try again."
+            }
+            else if (computerSelection == 'scissors') {
+                return "You win! Rock beats scissors."
+            }
+            else {
+                return "You lose! Paper beats rock."
+            }
+        else if (playerSelection == 'paper')
+            if (computerSelection == 'paper') {
+                return "Tie! Try again."
+            }
+            else if (computerSelection == 'rock') {
+                return "You win! Paper beats rock."
+            }
+            else {
+                return "You lose! Scissors beats paper."
+            }
+        else if (playerSelection == 'scissors')
+            if (computerSelection == 'scissors') {
+                return "Tie! Try again."
+            }
+            else if (computerSelection == 'paper') {
+                return "You win! Scissors beats paper."
+            }
+            else {
+                return "You lose! Rock beats scissors."
+            }
+        }
+    
+    const playerSelection = ''
+    const computerSelection = computerPlay()
+    const round = 0
+
+    function game () {
+        if (round < 5) {
+            var playerSelection = prompt("Rock, paper, or scissors?");
+            playRound()
+            round++
+        }
+        else {
+            alert("Surprise!")
+        }
     }
+
     </script>
 </html>
