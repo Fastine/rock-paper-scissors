@@ -12,6 +12,12 @@
         return (answers[Math.floor(Math.random() * answers.length)]);
         }
 
+    function startRound () {
+        let computerSelection = computerPlay ();
+        let playerSelection = prompt("Rock, paper, or scissors?");
+        playRound ();
+    }
+
     function playRound(playerSelection, computerSelection) { //Executes a round
         if (playerSelection == 'rock')
             if (computerSelection == 'rock') {
@@ -45,14 +51,14 @@
             }
         }
     
-    const playerSelection = ''
-    const computerSelection = computerPlay()
-    const round = 0
+    var playerSelection = ''
+    var computerSelection = computerPlay()
+    var round = 0
 
     function game () {
         if (round < 5) {
-            var playerSelection = prompt("Rock, paper, or scissors?");
-            playRound()
+            let playerSelection = prompt("Rock, paper, or scissors?");
+            startRound()
             round++
         }
         else {
