@@ -1,8 +1,4 @@
-<html>
-
-<script>
-    
-    // Computer Choices
+// Computer Choices
     let answers = ["rock",
 "paper",
 "scissors"];
@@ -54,14 +50,16 @@
             }
     }
 
-    // 5 round game; scorekeeper
-    function game () {
-        for (i = 0; i < 5; i++) {
-            let result = playRound();
-            console.log(result);
-            console.log("Player Score: " + pScore + " Computer Score: " + cScore)
-        }
-}
-</script>
+    // Buttons
+    let rock = document.getElementById("rock");
+    let paper = document.getElementById("paper");
+    let scissors = document.getElementById("scissors");
 
-</html>
+//     // 5 round game; scorekeeper
+//     function game () {
+//         for (i = 0; i < 5; i++) {
+//             let result = playRound();
+//             console.log(result);
+//             console.log("Player Score: " + pScore + " Computer Score: " + cScore)
+//         }
+// }
