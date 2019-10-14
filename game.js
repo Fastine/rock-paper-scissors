@@ -27,9 +27,7 @@
         var computerSelection = computerPlay();
 
         if (playerSelection == computerSelection) {
-            pScore++;
-            cScore++;
-            document.getElementById("play").innerHTML = "Tie! 1 point each";
+            document.getElementById("play").innerHTML = "Tie! Shoot again.";
             updateScore();
         }
         else if (playerSelection == "rock")
